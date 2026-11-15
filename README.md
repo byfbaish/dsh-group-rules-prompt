@@ -34,7 +34,7 @@ needed, the next turn picks it up.
 Local, linked into the profile (same shape as `dsh-handoff-relay`):
 
 ```bash
-cd C:/develop/workspace/dsh-group-rules-prompt
+cd <克隆目录>
 npm link                     # or: npm pack  → install the tarball
 dsh plugin --profile desktop add dsh-group-rules-prompt
 ```

@@ -30,7 +30,7 @@
 本地 link 进 profile（与 `dsh-handoff-relay` 同构）：
 
 ```bash
-cd C:/develop/workspace/dsh-group-rules-prompt
+cd <克隆目录>
 npm link                     # 或 npm pack 后装 tarball
 dsh plugin --profile desktop add dsh-group-rules-prompt
 ```
