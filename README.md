@@ -5,6 +5,14 @@ Each DSH session talks in exactly one place — a group session gets that group'
 private session gets nothing. The rules live in a plain Markdown file you edit; no restart
 needed, the next turn picks it up.
 
+## Status: not yet tested on a real installation
+
+This plugin has **not been verified end-to-end on a running DSH installation.** What exists
+today is the source plus 14 unit-level cases that run against a fake host and a synthetic
+`state.json`; they check logic, not integration. Before relying on it, install it into a
+throwaway profile and confirm that a group session's system prompt actually contains the
+rules section (and that a private session's does not).
+
 ## What it does
 
 - Registers one system-prompt section: `group-rules`, order `645`, `interpolate: false`.
@@ -119,6 +127,9 @@ node --test lib/index.test.mjs
 14 cases: hit / unnamed room / non-group session / `parts[]` fallback / missing file /
 broken `state.json` / mtime invalidation / TTL throttling / truncation / config defaults /
 `enabled: false` / empty rules / section name+order / `apply()` degrade path.
+
+These run against a stubbed host: **no real DSH session, no real prompt assembly.** Passing
+them means the logic is self-consistent, not that the plugin works installed.
 
 ## License
 
