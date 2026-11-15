@@ -1,0 +1,45 @@
+{
+  "name": "dsh-group-rules-prompt",
+  "version": "0.1.0",
+  "description": "Inject a group chat's rules into the system prompt once, instead of repeating them in every user message.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byfbaish/dsh-group-rules-prompt.git"
+  },
+  "homepage": "https://github.com/byfbaish/dsh-group-rules-prompt#readme",
+  "author": "byfbaish",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "system-prompt",
+    "group-chat",
+    "rules",
+    "prompt-cache"
+  ],
+  "scripts": {
+    "test": "node --test lib/index.test.mjs"
+  }
+}
